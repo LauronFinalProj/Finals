@@ -1,0 +1,92 @@
+Initial data preview:
+   sepal_length  sepal_width  petal_length  petal_width species
+0           5.1          3.5           1.4          0.2  setosa
+1           4.9          3.0           1.4          0.2  setosa
+2           4.7          3.2           1.3          0.2  setosa
+3           4.6          3.1           1.5          0.2  setosa
+4           5.0          3.6           1.4          0.2  setosa
+
+Missing values per column:
+sepal_length    0
+sepal_width     0
+petal_length    0
+petal_width     0
+species         0
+dtype: int64
+
+Data preview after cleaning missing values:
+   sepal_length  sepal_width  petal_length  petal_width species
+0           5.1          3.5           1.4          0.2  setosa
+1           4.9          3.0           1.4          0.2  setosa
+2           4.7          3.2           1.3          0.2  setosa
+3           4.6          3.1           1.5          0.2  setosa
+4           5.0          3.6           1.4          0.2  setosa
+
+Descriptive statistics:
+
+Mean values:
+sepal_length    5.843333
+sepal_width     3.057333
+petal_length    3.758000
+petal_width     1.199333
+dtype: float64
+
+Median values:
+[5.8  3.   4.35 1.3 ]
+
+Standard deviations:
+sepal_length    0.825301
+sepal_width     0.434411
+petal_length    1.759404
+petal_width     0.759693
+dtype: float64
+
+Variances:
+sepal_length    0.681122
+sepal_width     0.188713
+petal_length    3.095503
+petal_width     0.577133
+dtype: float64
+
+Correlation matrix:
+[[ 1.         -0.11756978  0.87175378  0.81794113]
+ [-0.11756978  1.         -0.4284401  -0.36612593]
+ [ 0.87175378 -0.4284401   1.          0.96286543]
+ [ 0.81794113 -0.36612593  0.96286543  1.        ]]
+
+Number of Setosa samples: 50
+Number of Versicolor samples: 50
+
+T-test results (Setosa vs Versicolor sepal length):
+T-statistic: -10.5210
+P-value: 0.0000
+
+Linear regression summary (sepal_length on sepal_width):
+                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:           sepal_length   R-squared:                       0.014
+Model:                            OLS   Adj. R-squared:                  0.007
+Method:                 Least Squares   F-statistic:                     2.074
+Date:                Sun, 25 May 2025   Prob (F-statistic):              0.152
+Time:                        16:43:28   Log-Likelihood:                -183.00
+No. Observations:                 150   AIC:                             370.0
+Df Residuals:                     148   BIC:                             376.0
+Df Model:                           1                                         
+Covariance Type:            nonrobust                                         
+===============================================================================
+                  coef    std err          t      P>|t|      [0.025      0.975]
+-------------------------------------------------------------------------------
+const           6.5262      0.479     13.628      0.000       5.580       7.473
+sepal_width    -0.2234      0.155     -1.440      0.152      -0.530       0.083
+==============================================================================
+Omnibus:                        4.389   Durbin-Watson:                   0.952
+Prob(Omnibus):                  0.111   Jarque-Bera (JB):                4.237
+Skew:                           0.360   Prob(JB):                        0.120
+Kurtosis:                       2.600   Cond. No.                         24.2
+==============================================================================
+
+Notes:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+
+Generating and saving plots...
+Plots saved successfully.
